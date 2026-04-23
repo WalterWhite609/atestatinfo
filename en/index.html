@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home</title>
+<link rel="stylesheet" href="../css/antet.css">
+<link rel="stylesheet" href="../css/acasa.css">
+<link rel="icon" type="image/x-icon" href="../img/Iasi.png">
+</head>
+
+<body id="sus">
+
+<a href="#sus" class="buton-sus">
+    <span class="sageata">▲</span>
+</a>
+
+<header class="antet">
+    <nav class="bara-navigatie">
+        <div class="logo-container">
+		<a href="../index.html" class="logo-main">Ia<span>și</span></a>
+        <div class="logo-sub">
+        <span class="linie-separatoare"></span>
+        <span class="nume-autor">Thesis · Ciobanu Rareș-Ionuț</span>
+        </div>
+        </div>
+        <ul class="meniu-linkuri">
+            <li><a href="atractii.html">Attractions</a></li>
+			<li><a href="evenimente.html">Events</a></li>
+            <li><a href="cazari.html">Accommodation & Flights</a></li>
+            <li><a href="restaurante.html">Restaurants</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Welcome to the Heart of Moldavia</h1>
+        <p>Discover the magic of Iași city</p>
+        <a href="#descriere" class="scroll-down">↓</a>
+    </div>
+</section>
+
+<section id="descriere" class="sectiune-info">
+    <div class="container">
+        <h2>The Story of the City</h2>
+        <p>Iași is the city of great loves, blooming linden trees, and history breathing through every wall of the Palace of Culture. As the historical capital of Moldavia, Iași welcomes you with a warm atmosphere where culture and modernity merge perfectly.</p>
+    </div>
+</section>
+<section class="fun-facts">
+<div class="container-facts">
+    <div class="fact">
+        <span class="icon">🌳</span>
+        <h3>460+</h3>
+        <p>Years old is Eminescu's Linden Tree in Copou Park.</p>
+    </div>
+    <div class="fact">
+        <span class="icon">🔔</span>
+        <h3>Hora Unirii</h3>
+        <p>The melody played by the Palace clock at every hour.</p>
+    </div>
+    <div class="fact">
+        <span class="icon">🎓</span>
+        <h3>The First</h3>
+        <p>University in Romania</p>
+    </div>
+</div>	
+</section>
+
+<section class="harta-interactiva">
+    <h2>Explore Iași on the map</h2>
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d135427.9991549907!2d27.42215900127073!3d47.156252598752914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40cafb7cf639ddbb%3A0x7ccb80da5426f53c!2zSWHImWk!5e1!3m2!1sro!2sro!4v1776780949931!5m2!1sro!2sro" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</section>
+
+<div class="vreme-plutitoare">
+    <div id="prognoza-container" class="prognoza-content">
+        <a class="weatherwidget-io" href="https://forecast7.com/en/47d1627d60/iasi/" data-label_1="IAȘI" data-label_2="Weather" data-icons="Climacons Animated" data-days="3" data-theme="weather_one" >IAȘI Weather</a>
+        <script>
+        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+        </script>
+    </div>
+
+    <button id="toggle-vreme" class="btn-vreme-float">
+        <span class="icon">🌤️</span>
+    </button>
+</div>
+
+<footer class="footer-atestat">
+    <div class="footer-content">
+        <p>&copy; 2026 Computer Science Certification Project</p>
+        <p>Created by: <strong>Ciobanu Rareș-Ionuț</strong></p>
+        <p>Student at: <strong>"Grigore C. Moisil" High School of Computer Science, Iași</strong></p>
+        <p>Coordinating Teachers: <strong>Vîrgă Liliana and Gorea-Zamfir Claudiu-Cristian</strong></p>
+		<p>Useful links: <strong><a href="../ro/bibliografie.html" class="link-footer">Bibliography</a></strong></p>
+    </div>
+</footer>
+
+<script>
+document.getElementById('toggle-vreme').onclick = function() {
+    const container = document.getElementById('prognoza-container');
+    const icon = this.querySelector('.icon');
+    container.classList.toggle('show');
+    if (container.classList.contains('show')) {
+        icon.textContent = '❌';
+    } else {
+        icon.textContent = '🌤️';
+    }
+};
+</script>
+
+</body>
+
+</html>

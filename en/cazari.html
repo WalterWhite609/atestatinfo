@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accommodation & Flights</title>
+<link rel="stylesheet" href="../css/antet.css">
+<link rel="stylesheet" href="../css/cazari.css">
+<link rel="icon" type="image/x-icon" href="../img/Iasi.png">
+</head>
+
+<body id="sus">
+
+<a href="#sus" class="buton-sus">
+    <span class="sageata">▲</span>
+</a>
+
+<header class="antet">
+    <nav class="bara-navigatie">
+        <div class="logo-container">
+		<a href="../index.html" class="logo-main">Ia<span>și</span></a>
+        <div class="logo-sub">
+        <span class="linie-separatoare"></span>
+        <span class="nume-autor">Thesis · Ciobanu Rareș-Ionuț</span>
+        </div>
+        </div>
+        <ul class="meniu-linkuri">
+		    <li><a href="index.html">Home</a></li>
+            <li><a href="atractii.html">Attractions</a></li>
+			<li><a href="evenimente.html">Events</a></li>
+            <li><a href="cazari.html">Accommodation & Flights</a></li>
+            <li><a href="restaurante.html">Restaurants</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="cautare-cazare">
+    <div class="cazare-box">
+        <div class="cazare-antet">
+            <h3>Plan your stay in <span>Iași</span></h3>
+			<p>Find the best flights via Zbor24.ro and the best hotels and apartments via Booking.com</p>
+        </div>
+        
+        <div class="input-group-cazare">
+		    <div class="field">
+                <label><i class="fas fa-users"></i> Departure City</label>
+                <select id="oras">
+                    <option value="VIE">Vienna</option>
+                    <option value="PRG" selected>Prague</option>
+                    <option value="MAD">Madrid</option>
+                    <option value="LON">London</option>
+					<option value="BER">Berlin</option>
+					<option value="ROM">Rome</option>
+					<option value="DUB">Dublin</option>
+					<option value="LUX">Luxembourg</option>
+					<option value="PAR">Paris</option>
+					<option value="AMS">Amsterdam</option>
+                </select>
+            </div>
+            <div class="field">
+                <label><i class="fas fa-calendar-alt"></i> Check-in</label>
+                <input type="date" id="checkin">
+            </div>
+            <div class="field">
+                <label><i class="fas fa-calendar-check"></i> Check-out</label>
+                <input type="date" id="checkout">
+            </div>
+            <div class="field">
+                <label><i class="fas fa-users"></i> People</label>
+                <select id="persoane">
+                    <option value="1">1 Person</option>
+                    <option value="2" selected>2 People</option>
+                    <option value="3">3 People</option>
+                    <option value="4">4 People</option>
+					<option value="5">5 People</option>
+					<option value="6">6 People</option>
+					<option value="7">7 People</option>
+					<option value="8">8 People</option>
+					<option value="9">9 People</option>
+                </select>
+            </div>
+			<div class="field">
+                <label><i class="fas fa-users"></i> Rooms</label>
+                <select id="camere">
+                    <option value="1">1 Room</option>
+                    <option value="2">2 Rooms</option>
+                    <option value="3">3 Rooms</option>
+					<option value="4">4 Rooms</option>
+                </select>
+            </div>
+			<div class="field">
+			    <label><i class="fas fa-users"></i> Sort by</label>
+                <select id="ordine">
+                    <option value="popularity">Most popular</option>
+                    <option value="price">Price (Lowest first)</option>
+					<option value="price_from_high_to_low">Price (Highest first)</option>
+                    <option value="class_asc">Stars (1 -> 5)</option>
+                    <option value="class">Stars (5 -> 1)</option>
+                    <option value="distance_from_search">Distance from center</option>
+                </select>
+            </div>
+			<button onclick="cautaPeZbor24()" class="btn-cauta">
+                SEARCH FLIGHT
+            </button>
+            <button onclick="cautaPeBooking()" class="btn-cauta">
+                SEARCH ACCOMMODATION
+            </button>
+        </div>
+    </div>
+</section>
+
+<footer class="footer-atestat">
+    <div class="footer-content">
+        <p>&copy; 2026 Computer Science Certification Project</p>
+        <p>Created by: <strong>Ciobanu Rareș-Ionuț</strong></p>
+        <p>Student at: <strong>"Grigore C. Moisil" High School of Computer Science, Iași</strong></p>
+        <p>Coordinating Teachers: <strong>Vîrgă Liliana and Gorea-Zamfir Claudiu-Cristian</strong></p>
+		<p>Useful links: <strong><a href="../ro/bibliografie.html" class="link-footer">Bibliography</a></strong></p>
+    </div>
+</footer>
+
+<script>
+function cautaPeBooking() {
+    const checkin = document.getElementById('checkin').value;
+    const checkout = document.getElementById('checkout').value;
+    const adulti = document.getElementById('persoane').value;
+	const camere = document.getElementById('camere').value;
+	const ordine = document.getElementById('ordine').value;
+    let url = "https://www.booking.com/searchresults.ro.html?ss=Ia%C5%9Fi%2C+Rom%C3%A2nia&label=gen173nr-10CAQoggJCDWNpdHlfLTExNTQ1NjFIIFgEaMABiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKnu57PBsACAdICJGZmNDdkOWFhLTY5ZDktNDM4MC1hOTA2LTk4NDMzOTNiNTJjOdgCAeACAQ&aid=304142&lang=ro&sb=1&src_elem=sb&src=searchresults&dest_id=-1161664&dest_type=city";
+    if (checkin && checkout) {
+        url += `&checkin=${checkin}&checkout=${checkout}`;
+    }
+    url += `&group_adults=${adulti}&no_rooms=${camere}&group_children=0&order=${ordine}`;
+    if (checkin){
+	window.open(url, '_blank');
+	}
+}
+
+function cautaPeZbor24() {
+    const oras = document.getElementById('oras').value;
+    const checkin = document.getElementById('checkin').value;
+    const checkout = document.getElementById('checkout').value;
+    const adulti = document.getElementById('persoane').value;
+	const camere = document.getElementById('camere').value;
+	const ordine = document.getElementById('ordine').value;
+    let url = "https://www.zbor24.ro/search/";
+    url += `${oras}/IAS/${checkin}/`;
+	if (checkout) {
+        url += `${checkout}?`;
+    }
+	else {
+	url += `-?`;
+	}
+    url += `passengers=${adulti}_0_0&cabinclass=economy`;
+    if (checkin){
+	window.open(url, '_blank');
+	}
+}
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+.tabel-container {
+    padding: 20px 0;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow-x: auto;
+}
+
+.titlu-tabel {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+.titlu-tabel span {
+    color: #e67e22;
+}
+
+.tabel-restaurante {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.tabel-restaurante thead {
+    background-color: #2c3e50;
+    color: white;
+}
+
+.tabel-restaurante th, 
+.tabel-restaurante td {
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.img-tabel {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.nume-res {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.pret {
+    color: #27ae60;
+    font-weight: bold;
+}
+
+.btn-tabel {
+    background-color: #e67e22;
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.btn-tabel:hover {
+    background-color: #2c3e50;
+}
+
+.tabel-restaurante tbody tr:hover {
+    background-color: #fff5ee;
+}

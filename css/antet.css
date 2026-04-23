@@ -1,0 +1,272 @@
+.antet {
+    background-color: #2c3e50;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.2);
+}
+
+.bara-navigatie {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-main {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.logo-main span {
+    color: #e67e22;
+}
+
+.logo-sub {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.linie-separatoare {
+    width: 1px;
+    height: 25px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.nume-autor {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 11px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.2;
+}
+
+.meniu-linkuri {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 5px;
+}
+
+.meniu-linkuri li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 13px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.meniu-linkuri li a:hover {
+    background-color: #e67e22;
+    color: white;
+}
+
+body {
+    padding-top: 80px;
+}
+
+.buton-sus {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: #e67e22;
+    color: white;
+    text-decoration: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 999;
+    transition: all 0.3s ease;
+}
+
+.buton-sus:hover {
+    background-color: #2c3e50;
+    transform: scale(1.1);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #e67e22;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #2c3e50;
+}
+
+.vreme-plutitoare {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.btn-vreme-float {
+    width: 50px;
+    height: 50px;
+    background-color: #2c3e50;
+    color: white;
+    border: 2px solid #e67e22;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-vreme-float:hover {
+    background-color: #e67e22;
+    transform: scale(1.1);
+}
+
+.prognoza-content {
+    max-height: 0;
+    width: 300px;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    background: rgba(44, 62, 80, 0.95);
+    border-radius: 15px;
+    margin-bottom: 15px;
+    opacity: 0;
+}
+
+.prognoza-content.show {
+    max-height: 450px;
+    opacity: 1;
+    padding: 10px;
+    border: 1px solid #e67e22;
+}
+
+.harta-interactiva {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.harta-interactiva h2 { margin-bottom: 30px; color: #2c3e50; }
+
+.map-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.footer-atestat {
+    background-color: #2c3e50;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 50px;
+    border-top: 4px solid #e67e22;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-content p {
+    margin: 8px 0;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.footer-content strong {
+    color: #e67e22;
+}
+
+.link-footer {
+    color: #e67e22;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.link-footer:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .footer-atestat {
+        padding-bottom: 80px; 
+    }
+}
+
+@media (max-width: 768px) {
+    .antet {
+        height: auto;
+        padding: 15px 0;
+    }
+
+    .bara-navigatie {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .logo-sub {
+        display: none;
+    }
+
+    .logo-main {
+        font-size: 22px;
+    }
+
+    .meniu-linkuri {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .meniu-linkuri li a {
+        padding: 8px 12px;
+        font-size: 11px;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+	
+    body {
+        padding-top: 120px;
+    }
+}

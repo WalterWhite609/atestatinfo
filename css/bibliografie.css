@@ -1,0 +1,86 @@
+.bibliografie-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.bibliografie-container h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+}
+
+.bibliografie-container h1 span {
+    color: #e67e22;
+}
+
+.subtitle {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.grid-bibliografie {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    text-align: left;
+}
+
+.card-resursa {
+    background: #fdfdfd;
+    padding: 25px;
+    border-radius: 12px;
+    border-top: 4px solid #2c3e50;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.card-resursa h3 {
+    color: #e67e22;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.card-resursa ul {
+    list-style: none;
+    padding: 0;
+}
+
+.card-resursa ul li {
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.btn-back {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    background-color: #2c3e50;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 2px solid #e67e22;
+}
+
+.btn-back:hover {
+    background-color: #e67e22;
+    transform: translateX(5px);
+}
+
+@media (max-width: 768px) {
+    .btn-back {
+        bottom: 20px;
+        left: 20px;
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+}
